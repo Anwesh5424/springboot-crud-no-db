@@ -14,6 +14,11 @@ public class ProductController {
     public ProductController(ProductService service) {
         this.service = service;
     }
+    @GetMapping("/hello")
+    public String sayHello() {
+        return "Hello from Spring Boot!";
+    }
+
 
     @GetMapping
     public List<Product> getAll() {
